@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <style>
+        .blockArt {
+            background-color: azure;
+            padding:30px;
+        }
+
+        body {
+            margin: 10px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // on va acrire dans le body donc on le séléctionne
+        const blockHtml = document.querySelector("body");
+        // creation d'une div
+        const blockDiv = document.createElement("div");
+        // ajout d'une class
+        blockDiv.classList.add(".blockArt");
+        // creation d'une balise titre h1
+        const title = document.createElement("h1");
+        title.textContent = "Les chatons c'est mignons !!";
+        // creation d'une image
+        const imageArt = document.createElement("img");
+        imageArt.src = "./chaton.jpeg";
+        imageArt.style.width = "90%";
+        // creation d'un paragraphe
+        const textArt = document.createElement("p");
+        textArt.textContent = "Lorem ipsum dolor sit amet. Et eveniet iure et facilis voluptatem qui consequatur quia eos incidunt perspiciatis non adipisci eius. Aut quidem officia 33 cumque possimus ex autem incidunt ut quae vitae? Cum voluptatem eius ut reiciendis distinctio aut culpa consequatur! "
+        blockHtml.prepend(title,imageArt,textArt);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boucles
+    </title>
+</head>
+
+<body>
+    <script>
+        const gafa = [{ nom: "Google", url: "https://www.google.com" }, { nom: "Amazon", url: "https://www.amazon.fr" }, { nom: "Facebook", url: "https://www.facebook.fr" }, { nom: "Apple", url: "https://www.apple.fr" }];
+        const bodyTag = document.querySelector("body");
+        const ulTag = document.createElement("ul");
+        gafa.forEach(link => {
+            const linkData = document.createElement("a");
+            const liTag = document.createElement("li");
+            linkData.href= link.url;
+            linkData.textContent = link.nom;
+            liTag.prepend(linkData);
+            ulTag.appendChild(liTag);
+        } )
+        bodyTag.prepend(ulTag);
+    </script>
+</body>
+
+</html>

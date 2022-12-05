@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableaux et objets</title>
+</head>
+
+<body>
+    <script>
+        const platsPref = [];
+        platsPref.push("paella");
+        platsPref.push("choucroute");
+        platsPref.push("bourguignon");
+        platsPref.push("burger");
+        platsPref.push("pizza");
+        platsPref.splice(2, 1, "Cassoulet");
+        platsPref.splice(platsPref.length-1, 0, "Frites");
+        console.log(platsPref);
+
+        const mySelf = {};
+        mySelf.firstName = "John";
+        mySelf.LastName = "Doe";
+        mySelf.birthYear = "2001";
+        mySelf.favoriteMovies = ["Retour vers le futur","Kirikou","la cité de la peur"];
+        mySelf.favoriteMovies[mySelf.favoriteMovies.length-1] = "Les aristochats";
+        console.log(mySelf);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+</head>
+<body>
+    <script>
+    let varNumber1 = 14;
+    let varNumber2 = 30;
+    let varText1 = "texte un";
+    let varText2 = "texte deux";
+    let boolean1 = true;
+    let boolean2 = false;
+
+
+    // même type
+    console.log(varNumber1 + varNumber2); // addition
+    console.log(varText1 + varText2); // concatenation
+    console.log(boolean1 + boolean2); // true plus false devient l'addition de 1 + 0 !
+
+    // types différents
+    console.log(varNumber1 + varText1); // concatenation
+    console.log(varNumber1 + boolean1); // addition
+    console.log(varText1 + boolean2); // concatenation
+
+    const maConstante = "Du texte";
+    maConstante = "Un autre texte";
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <style>
+        .blockArt {
+            background-color: rgb(182, 68, 37);
+            padding: 30px;
+        }
+
+        body {
+            margin: 20px 100px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // on va écrire dans le body donc on le séléctionne
+        const blockHtml = document.querySelector("body");
+        // creation d'une div
+        const blockDiv = document.createElement("div");
+        // ajout d'une class à la div
+        blockDiv.classList.add("blockArt");
+        // creation d'une balise titre h1
+        const title = document.createElement("h1");
+        // ajout de texte
+        title.textContent = "Les chatons c'est mignons !!";
+        // creation d'une image
+        const imageArt = document.createElement("img");
+        // ajout de l'attribut src
+        imageArt.src = "./chaton.jpeg";
+        // modification de width pour être à 100%
+        imageArt.style.width = "100%";
+        // creation d'un paragraphe
+        const textArt = document.createElement("p");
+        // ajout de texte
+        textArt.textContent = "Lorem ipsum dolor sit amet. Et eveniet iure et facilis voluptatem qui consequatur quia eos incidunt perspiciatis non adipisci eius. Aut quidem officia 33 cumque possimus ex autem incidunt ut quae vitae? Cum voluptatem eius ut reiciendis distinctio aut culpa consequatur! "
+        //Ajout des blocks title,imageArt et textArt à blockDiv
+        blockDiv.append(title, imageArt, textArt);
+        //Ajout de blockDiv au body
+        blockHtml.append(blockDiv);
+
+    </script>
+</body>
+
+</html>
